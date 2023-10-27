@@ -1,6 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "CRXJS React Vite Example",
-  "version": "1.0.0",
-  "action": { "default_popup": "index.html" }
+  "name": "Lounge chrome extension",
+  "version": "0.0.1",
+  "action": { "default_popup": "index.html" },
+  "permissions": ["scripting", "storage"],
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "host_permissions": ["https://loungegame.site/sameanswer/*"]
 }
